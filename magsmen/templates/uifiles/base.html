@@ -1,0 +1,504 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+
+  <!-- <title>Magsmen | The Best Way to Increase Your Brand Growth</title>
+  <meta name="description" content="Magsmen is the best way to increase your brand growth. We offer brand consulting, Online brand management, and more. Contact us today and get a free audit for your brand">
+  <meta name="keywords" content="brand consultent"> -->
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="{% static 'assets/imgs/logo/favicon.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-bRy4DgiTOsFSW9G7xNGzhwSHpP4HXVBNr0vWBE/bfS5eWvONqZnlg0hx0Ktq3XvKQlnbWj7Ytq/e0SDfw/dgFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  
+
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/progressbar.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/master.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/intelinput.css' %}">
+  <link rel="stylesheet" href="{% static 'admin.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'home/home.css' %}">
+  <link rel="stylesheet" href="{% static 'about/about.css' %}">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175455663-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-175455663-1');
+  </script>
+</head>
+
+
+<body>
+  <!-- Cursor Animation -->
+  <!-- <div class="cursor1"></div>
+  <div class="cursor2"></div> -->
+
+
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <!-- <div class="loading"> -->
+      <div class="loaging-gif"></div>
+    <!-- <div class="bar bar1"></div> -->
+
+  </div>
+
+
+
+  <!-- Switcher Area Start -->
+  <div class="switcher__area">
+    <div class="switcher__icon">
+      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="switcher__items">
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">Cursor</h2>
+        </div>
+        <div class="switcher__btn">
+          <select name="cursor-style" id="cursor_style">
+            <option value="1">default</option>
+            <option selected value="2">animated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">mode</h2>
+        </div>
+        <div class="switcher__btn mode-type wc-col-2">
+          <button class="active" data-mode="light">light</button>
+          <button data-mode="dark">dark</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Switcher Area End -->
+
+
+
+  <!-- Scroll Smoother -->
+  <div class="has-smooth" id="has_smooth"></div>
+
+
+  <!-- Go Top Button -->
+  <button id="scroll_top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!---whatsapp- integration-->
+     <a href='https://wa.me/+919044910449'  class="whatsapp whatsapp-img" target="_blank"> <img src= "{% static 'assets/imgs/home-7/magsmen-whatsapp-logo-50x50.png' %}"  width="60px" height="60px" alt="whatsapp"/></a> 
+
+    <!---whatsapp-integration -end-->
+
+  <!-- Header area start -->
+  <!-- Google tag (gtag.js) -->
+
+  <header class="header__area-3">
+    <div class="header__inner-3">
+      <div class="header__logo-2">
+        <a href="/" class="logo-dark"><img src="{% static 'assets/imgs/logo/magsmen-new-version.png' %}" height="55" alt="Site Logo"></a>
+        <a href="/" class="logo-light"><img src="{% static 'assets/imgs/logo/magsmensidebase-mobial-logo-45x200.png' %}" alt="Site Logo"></a>
+      </div>
+      <div class="header__nav-2">
+        <ul class="main-menu-3 menu-anim header-navbar">
+          <li class="has-megamenu"><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+          <li><a href="/ourstory/" class="{% if request.path == '/ourstory/' %}active{% endif %}">Our story </a></li>
+          <!-- <li><a href="/services/">Services</a></li> -->
+          <li><a href="/expertise/" class="{% if request.path == '/expertise/' %}active{% endif %}">Expertise </a>
+            <ul class="main-dropdown">
+              <li><a href="/brandconsulting/">Brand Consulting</a></li>
+              <li><a href="/personalbrand/">Personal Brand Consulting</a></li>
+              <li><a href="/imageconsulting/">Image Consulting</a></li>
+              <li><a href="/corporaterebranding/">Corporate Rebranding</a></li>
+              <li><a href="/launchpad/">Launchpad</a></li>
+            </ul>
+          </li>
+          <li><a href="/works/" class="{% if request.path == '/works/' %}active{% endif %}">Works </a></li>
+          <li class="has-megamenu"><a href="/blogs/" class="{% if request.path == '/blogs/' %}active{% endif %}">Blogs</a></li>
+          <li class="has-megamenu"><a href="/carrerspage/"class="{% if request.path == '/carrerspage/' %}active{% endif %}">Careers</a></li>
+          <!-- <li class="has-megamenu"><a href="/reach-us-out/">Reach us out</a></li> -->
+        </ul>
+      </div>
+
+      <div class="react-out-us-icon">
+        <a href="/reach-us-out/">REACH US OUT
+          <div class="icon-box"><i class="fa-solid fa-arrow-right arrow-right"></i></div>
+        </a>
+      </div>
+
+      <div class="header__nav-icon-3 menu-bar-icon">
+        <button class="search-icon" id="search_icon"></button>
+        <button class="search-icon" id="search_close"></i></button>
+        <button id="open_offcanvas"><img src="{% static 'assets/imgs/icon/menu-black.png' %}" alt="Menubar Icon"></button>
+      </div>
+    </div>
+  </header>
+  <div class="header__search">
+    <form action="#">
+      <input type="text" name="s" id="s" placeholder="Search..">
+    </form>
+  </div>
+  <!-- Header area end -->
+
+
+  <!-- Offcanvas area start -->
+  <div class="offcanvas__area">
+    <div class="offcanvas__body">
+      <div class="offcanvas__left">
+        <div class="offcanvas__logo">
+          <a href="#"><img src="{% static 'assets/imgs/logo/magsmen-brand-consulants-new-logo-180x80px.png' %}"  alt="Offcanvas Logo"></a>
+        </div>
+        <div class="offcanvas__social">
+          <h3 class="social-title">Follow Us</h3>
+          <ul class="why-choose-ul">
+            <li><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in">Linkedin</a></li>
+            <li><a href="https://www.instagram.com/magsmenindia/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/magsmenindia">Facebook</a></li>
+            <li><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ">YouTube</a></li>
+            <li><a href="https://twitter.com/magsmenindia">Twitter</a></li>
+          </ul>
+        </div>
+        <!-- <div class="offcanvas__links">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="blog.html">blog</a></li>
+          </ul>
+        </div> -->
+      </div>
+      <div class="offcanvas__mid">
+        <div class="offcanvas__menu-wrapper">
+          <nav class="offcanvas__menu">
+            <ul class="menu-anim">
+              <li><a href="/">Home</a></li>
+              <li><a href="/ourstory/">Our story</a></li>
+              <!-- <li><a href="/services/">Services</a></li> -->
+              <li><a href="/expertise/">Expertise </a>
+                <ul>
+                  <li><a href="/brandconsulting/">Brand Consulting</a></li>
+                  <li><a href="/personalbrand/">Personal Brand Consulting</a></li>
+                  <li><a href="/imageconsulting/">Image Consulting</a></li>
+                  <li><a href="/corporaterebranding/">Corporate Rebranding</a></li>
+                  <li><a href="/launchpad/">Launchpad</a></li>
+                </ul>
+              </li>
+              <!-- <li class=""><a href="#">CaseStudy</a></li> -->
+              <li><a href="/works/">Works </a></li>
+              <li class="h"><a href="/blogs/">Blogs</a></li>
+              <li><a href="/carrerspage/">Careers</a></li>
+              <li class=""><a href="/reach-us-out/">Reach us out</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="offcanvas__right" style="margin-top: 15px;">
+       
+        <div class="offcanvas__contact mt-5">
+          <h3>Head Office</h3>
+          <ul>
+            <li>Phone: <a href="tel:90449 10449">+(91) 90449 10449 </a></li>
+            <li>Email: <a href="mailto:connect@magsmen.in">connect@magsmen.in</a></li>
+            <li>Address:  <a  style="text-transform: capitalize; font-size: 15px;"> 208,212 Ap Cotton Association Building,
+              Opp Avantra Jewels, Lakshmipuram Main Road,
+              Guntur, Andhra Pradesh, 522007.</a></li>
+            <!-- <li><p>211,212 AP COTTON ASSOCIATION BUILDING, OPP AVANTRA JEWELS, LAKSHMIPURAM MAIN ROAD, GUNTUR, ANDHRA PRADESH, 522007</li> -->
+          </ul>
+          <h3>Corporate Office</h3>
+          <ul>
+            <li>Phone: <a href="tel:90449 10449">+(91) 90449 10449 </a></li>
+            <li>Email: <a href="mailto:hydops@magsmen.in">hydops@magsmen.in</a></li>
+            <li>Address:  <a  style="text-transform: capitalize; font-size: 15px;">4th Floor 402, Ayyappa Society,
+              Plot No:1303, Madhapur,
+              Hyderabad, Telangana 500081.</span></a></li>
+          </ul> 
+          <h3 class="pb-0">Australia Office</h3>
+          <ul>
+           
+            <li><a href="tel:+10422554889">+10422554889</a></li>
+            <!-- <li><a href="magsmen.com.au" target="_blank">Magsmen.com.au</a></li> -->
+            <li><a href="mailto:connect@magsmen.com.au" style="text-transform:lowercase">CONNECT@MAGSMEN.COM.AU</a></li>
+            <li><span style="text-transform:capitalize"> 1/9, Fifth Avenue, Rowville, VIC, 3178.</span></li>
+          </ul> 
+        </div>
+        <!-- <img src="{% static 'assets/imgs/shape/11.png' %}" alt="shape" class="shape-1">
+        <img src="{% static 'assets/imgs/shape/12.png' %}" alt="shape" class="shape-2"> -->
+      </div>
+      <div class="offcanvas__close">
+        <button type="button" id="close_offcanvas"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Offcanvas area end -->
+
+  {% block content %}
+    
+  {% endblock %}
+
+      <!-- Footer area start -->
+      <footer class="footer__area-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="footer-content">
+                <!-- <img src="{% static 'assets/imgs/logo/magsmen-footer-logo-trail (2).png' %}" alt="Footer Logo2"> -->
+                <img src="{% static 'assets/imgs/logo/magsmen-footer-logo.png' %}" alt="Footer Logo">
+                <p style="text-align: justify;" class="pt-4 text-white">As one of the leading brand consulting firms, Magsmen is a great choice for
+                  businesses that want to turn themselves into a brand. With 9 awards on brand strategy, Magsmen partnered with some
+                  of the industry's leading brands in India.</p>
+                <img src="{% static 'assets/imgs/logo/magsmen-footer-logo-trail (2).png' %}" alt="Footer Logo2">
+              </div>
+            </div>
+            <div class="col-lg-2">
+                <ul class="main-menu-3 menu-anim footer-navbar">
+                  <li><h3 class="pb-4" style="color:#DBBD7D;">LINKS</h3></li>
+                  <li class="has-megamenu"><a href="/">home</a></li>
+                  <li><a href="/ourstory/">our story </a></li>
+                  <!-- <li><a href="/services/">Services</a></li> -->
+                  <li><a href="/expertise/">Expertise </a>
+                  </li>
+                  <li><a href="/works/">Works </a></li>
+                  <li class="has-megamenu"><a href="/blogs/">Blogs</a></li>
+                  <li class="has-megamenu"><a href="/carrerspage/">Careers</a></li>
+                  <li class="has-megamenu"><a href="/reach-us-out/">Reach us out</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul class="main-menu-3 menu-anim footer-navbar">
+                <li><h3 class="pb-4" style="color:#DBBD7D;">SUPPORT</h3></li>
+                <li class="has-megamenu"><a href="/gallery/">MEDIA</a></li>
+                <li><a href="/privacy-policy/">PRIVACY POLICY</a></li>
+                <li class="has-megamenu"><a href="/reach-us-out/">REACH US OUT</a></li>
+                <li><a href="/faqs/">FAQ</a></li>
+                
+              </ul>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer__subscribe">
+              <form action="#">
+                <input type="email" name="email" placeholder="Enter your email">
+                <button type="submit" class="subs-btn"><i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
+            <!-- <div class="subscribe-email">
+              <input type="text" name="email" id="email" placeholder=" Enter Your Email">
+              <button type="button" id="email-subscribe">SUBSCRIBE</button>
+            </div> -->
+            <div class="mail-text mt-5">
+              <a href="mailto:text@gmail.com"><i class="fas fa-envelope" style="color: #DBBD7D;margin-right: 10px;"></i>connect@magsmen.in</a>
+            </div>
+            <div class="mail-text mt-5">
+              <a href="tel:+91 1234567890"><i class="fas fa-phone" style="color: #DBBD7D;margin-right: 10px;"></i>+91 90449 10449</a>
+            </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="footer__btm-3">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="footer__copyright-3">
+                  <p>© 2023  All rights reserved by Magsmen | Crafted by <a href="https://dt7.agency/" target="_blank">Dt7.agency</a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-xxl-6 col-xl-6 col-lg-6">
+                
+                <div class="footer__nav-2">
+                  <ul class="research__tools research-social-icons d-flex justify-content-center align-items-center">
+                    <h5 class="text-white follow-text" style="color: #DBBD7D !important;">FOLLOW US</h5>
+                    <li class="text-white "><a href="https://www.linkedin.com/company/magsmen/?originalSubdomain=in" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="text-white "><a href="https://www.instagram.com/magsmenindia/" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-instagram"></i></a></li>
+                    <li class="text-white"><a href="https://www.facebook.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-facebook"></i></a></li>
+                    <li class="text-white"><a href="https://www.youtube.com/channel/UCG3agq3IYZmQifQeM2xFNbQ" target="_blank"style="border:1px solid #fff" class="text-white"><i class="fab fa-youtube"></i></a></li>
+                    <li class="text-white"><a href="https://twitter.com/magsmenindia" target="_blank" class="text-white" style="border:1px solid #fff"><i class="fab fa-twitter"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer area end -->
+
+
+    </div>
+  </div>
+
+
+
+  <!-- All JS files -->
+  <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/counter.js' %}"></script>
+  <script src="{% static 'assets/js/gsap.min.js' %}"></script>
+  <script src="{% static 'assets/js/ScrollTrigger.min.js' %}"></script>
+  <script src="{% static 'assets/js/ScrollToPlugin.min.js' %}"></script>
+  <script src="{% static 'assets/js/ScrollSmoother.min.js' %}"></script>
+  <script src="{% static 'assets/js/SplitText.min.js' %}"></script>
+  <script src="{% static 'assets/js/chroma.min.js' %}"></script>
+  <script src="{% static 'assets/js/mixitup.min.js' %}"></script>
+  <script src="{% static 'assets/js/vanilla-tilt.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.meanmenu.min.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{% static 'assets/js/contact.js' %}"></script>
+  <script src="{% static 'assets/js/stepform.js' %}"></script>
+  <script src="{% static 'assets/js/owlcarousel.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+
+
+  
+  <script>
+    document.getElementById("video_check").addEventListener("change", function() {
+      if (this.checked) {
+        document.querySelector(".sec-title-wrapper").style.display = "none";
+      } else {
+        document.querySelector(".sec-title-wrapper").style.display = "block";
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const videoCheck = document.getElementById('video_check');
+    
+     
+      const heroImgAni = document.querySelector('.hero3-img-ani');
+
+      videoCheck.addEventListener('change', function() {
+        if (this.checked) {
+          heroImgAni.style.display = 'none';
+          
+         
+        
+        } else {
+          heroImgAni.style.display = 'block';
+        }
+      });
+    });
+  </script>
+  <!-- icon -->
+  <script> 
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoCheck = document.getElementById('video_check');
+    const videoElement = document.getElementById('video');
+    const videoContainer = document.querySelector('.video');
+  
+    videoCheck.addEventListener('change', function() {
+      if (this.checked) {
+        // Hide the play icon when the video starts playing
+        videoContainer.classList.add('hide-play-icon');
+        // Pause the video if the checkbox is checked
+        videoElement.pause();
+      } else {
+        // Show the play icon when the video is not playing
+        videoContainer.classList.remove('hide-play-icon');
+      }
+    });
+  });
+</script>
+<!-- modal script -->
+
+<script>
+  window.addEventListener("load", function () {
+    var modal_testimonial = document.querySelector("#modal_testimonial");
+    var modal_close = document.querySelector("#modal_close");
+
+    modal_testimonial.classList.add("modal-show");
+
+    modal_close.addEventListener("click", function () {
+      modal_testimonial.classList.remove("modal-show");
+    });
+  });
+</script>
+
+<!-- <script>
+  var video = document.getElementById("myVideo");
+  
+  function playVideo() {
+    video.muted = false; o
+    video.play(); 
+  }
+
+  
+  playVideo();
+</script> -->
+<script>
+  var video = document.getElementById("myVideo");
+
+ 
+  video.addEventListener("click", function() {
+    video.muted = false; 
+    video.play(); 
+  });
+</script>
+
+
+
+
+<!-- county code in phone numbers -->
+<script>
+const phoneInputField = document.querySelector("#phone");
+const info = document.querySelector(".alert-info");
+
+// Initialize intlTelInput with initial country set to India
+const phoneInput = window.intlTelInput(phoneInputField, {
+  initialCountry: "in",  // Set initial country to India (ISO 3166-1 alpha-2 code for India is "in")
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+
+function process(event) {
+  event.preventDefault();
+
+  const phoneNumber = phoneInput.getNumber();
+
+  info.style.display = "";
+  info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+}
+
+// Optionally, you can set the default flag to India's flag
+const selectedFlag = phoneInputField.parentElement.querySelector(".iti__selected-flag");
+// selectedFlag.style.backgroundImage = "url('https://flagpedia.net/data/flags/h80/in.png')";
+</script>
+
+
+
+
+
+
+</body>
+
+</html>

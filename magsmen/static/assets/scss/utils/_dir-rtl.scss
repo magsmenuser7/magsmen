@@ -1,0 +1,107 @@
+//
+// RTL Support
+// --------------------------------
+
+
+.dir-rtl {
+  direction: rtl;
+
+  li {
+    text-align: right;
+  }
+
+
+
+
+  .hero__area-3 {
+    &::after {
+      right: unset;
+      left: 50px;
+    }
+
+    &::before {
+      transform: rotateY(180deg);
+    }
+
+    .hero3-img {
+      right: unset;
+      left: 0;
+    }
+
+    .video-info {
+      left: unset;
+      right: 500px;
+    }
+
+    .intro-title {
+      left: 0;
+    }
+
+    .title-right {
+      right: unset;
+      left: 0;
+    }
+
+
+  }
+
+
+  .header__nav-icon-3 {
+    .search-icon {
+      padding-left: 50px;
+
+
+      &::after {
+        right: unset;
+        left: 25px;
+      }
+    }
+  }
+
+  .about__area-3 {
+    &::after {
+      left: 40%;
+    }
+
+    .sec-text-wrapper {
+      padding-right: 210px;
+      padding-left: 0;
+    }
+  }
+
+  .wc-btn-primary i,
+  .wc-btn-black i,
+  .wc-btn-light i,
+  .wc-btn-pink i,
+  .wc-btn-secondary i {
+    transform: rotate(-130deg);
+  }
+
+  .service__area-3 {
+    .sec-title-wrapper {
+      padding-left: 0;
+      padding-right: 330px;
+
+      &::after {
+        left: 62%;
+      }
+
+      p {
+        margin-left: 0;
+        margin-right: 220px;
+      }
+    }
+  }
+
+  .portfolio__slide-3 {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 110px;
+  }
+
+
+
+
+
+
+}
