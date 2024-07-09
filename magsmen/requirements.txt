@@ -1,4 +1,0 @@
-django
-django-jazzmin
-pillow
-django-ckeditor
