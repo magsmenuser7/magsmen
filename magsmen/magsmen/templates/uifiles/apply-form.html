@@ -1,0 +1,103 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+<main>
+  <!-- Contact area start -->
+  <section class="contact__area-6">
+    <div class="container g-0 line pt-120 pb-110">
+      <span class="line-3"></span>
+      <div class="row">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+          <div class="sec-title-wrapper">
+            <h2 class="sec-title-2 animation__char_come mail-title">Join Us in Crafting Brand Stories</h2>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 d-none">
+          <div class="contact__text">
+            <p>Great! We're excited to hear from you and let's start
+              something special togerter. call us for any inquery.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row contact__btm" style="display: flex;justify-content: center;align-items: center;">
+        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 d-none">
+          <div class="contact__info">
+            <h3 class="sub-title-anim-top animation__word_come">Don't be afraid man ! <br>say hello</h3>
+            <ul>
+              <li><a href="tel:+(2)578365379">+(2) 578 - 365 - 379</a></li>
+              <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+              <li><span>230 Norman Street New York, <br> QC (USA) H8R 1A1</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
+          <div class="contact__form">
+            <form id="apply-form" method="POST">
+              {% csrf_token %}
+              <div class="row g-3">
+                <div class="col-xxl-6 col-xl-6 col-12">
+                  <input type="text" name="name" id="name" placeholder="Name *">
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-12">
+                  <input type="email" name="email" id="email" placeholder="Email *">
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-xxl-6 col-xl-6 col-12">
+                  <input type="tel" name="phone" id="phonenumber" placeholder="Phone *">
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-12">
+                  <select name="selectcategory" id="selectcategory" class="form-control" required>
+                    <option value="select">Select Category *</option>
+                    <option value="digitalmarketing">Digital Marketing</option>
+                    <option value="brandstrategy">Brand Strategy</option>
+                    <option value="designing">Designing</option>
+                    <option value="bdm">BDM</option>
+                    <option value="Apply for internship">Apply for internship</option>
+                    <option value="Apply as a consultant">Apply as a consultant</option>
+                    <option value="Apply as an advisor">Apply as an advisor</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-xxl-6 col-xl-6 col-12">
+                  <select name="location" id="location" class="form-control" required>
+                    <option value="location">Location *</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="guntur">Guntur</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mt-4">
+                <div class="col-xxl-12 col-xl-12 col-12">
+                  <label for="uploadfile">Upload CV *</label>
+                  <input type="file" name="uploadfile" id="uploadfile" placeholder="upload cv" required>
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-12">
+                  <!-- <div class="job__apply" id="btn_wrapper">
+                    <button id="applybtn" type="button" class="wc-btn-primary btn-hover btn-item"><span></span>Submit<i
+                        class="fa-solid fa-arrow-right"></i></button>
+                  </div> -->
+                  <div class="Job-apply">
+                    <button id="applybtn" type="button" class="wc-btn-primary btn-hover btn-item"><span></span>Submit<i
+                      class="fa-solid fa-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact area end -->
+
+
+</main>
+
+
+{% endblock %}

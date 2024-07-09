@@ -1,0 +1,60 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Job detail start -->
+        <section class="job__detail pt-5">
+            <div class="container g-0 line pb-110">
+                <span class="line-3"></span>
+        
+                <div class="row">
+                    {% if career_job %}
+                    <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-8">
+                        <div class="job__detail-wrapper">
+                            <h2 class="sec-title">{{career_job.ExpertiseName}}</h2>
+                            <ul class="job__detail-meta">
+                                <li><span>Location</span>{{career_job.Location}}</li>
+                                <li><span>Date</span>{{career_job.CreatedAt}}</li>
+                                <li><span>Job Type</span>{{career_job.JobType}}</li>
+                            </ul>
+                            <div class="job__detail-content">
+                                <p>{{career_job.Description}}</p>
+                            </div>
+
+                            <div class="job__detail-content job_content_detail">
+                                <p>{{career_job.Body | safe}}</p>
+                            </div>
+
+                            
+        
+                            <div class="job__apply" id="btn_wrapper">
+                                <a href="/applyform/"><button class="wc-btn-primary btn-hover btn-item"><span></span> Apply this
+                                        <br>Position <i class="fa-solid fa-arrow-right"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+
+                    {% if career_job %}
+                    <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-4 job_sidebar">
+                        <div class="job__detail-sidebar">
+                            <ul>
+                                <li><span>Experience</span> {{career_job.Experience}}</li>
+                                <li><span>Working Hours</span>{{career_job.WorkingHours}}</li>
+                                <li><span>Working Days</span>{{career_job.WorkingDays}}</li>
+                                <li><span>Salary</span> {{career_job.Salary}}</li>
+                                <li><span>Vacancy</span> No of Vacancies:{{career_job.Vacancy}}</li>
+                                <li><span>Deadline</span> {{career_job.DeadLine}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        <!-- Job detail end -->
+
+
+
+{% endblock %}

@@ -1,0 +1,103 @@
+<title>Magsmen | Get in touch</title>
+<meta name="description" content="some of the brands we built include suma filmy arts, tenali double horse, triplex detergents, telugu foods, Cargill, surya colors and many more. Get in touch with us and skyrocket your brand growth.">
+<meta name="keywords" content="brand consultent, Brand Experts">
+
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+
+        <!-- Contact area start -->
+        <section class="contact__area-6">
+          <div class="container g-0 line pt-120 pb-110">
+            <span class="line-3"></span>
+            <div class="row">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                <div class="sec-title-wrapper">
+                  <h2 class="sec-title-3 animation__char_come contact-text p-3">Fuel your next big idea with a cup (or two) of chai or coffee at Magsmen!</h2>
+                </div>
+              </div>
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6" style="text-align: start !important;">
+                <div class="contact__text10 p-3">
+                  <p>Let's spill the ideas, that can elevate your brand.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row contact__btm p-3">
+              <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 address-column">
+                <div class="contact__info adderss-one">
+                  <h3 class="sub-title-anim-top animation__word_come" style="font-size: 22px; margin-bottom:-18px">Head Office</h3>
+                  <ul>
+                    <li><a href="tel:+(2)578365379" >+91 90449 10449</a></li>
+                    <li><a href="mailto:connect@magsmen.in" style="text-transform:lowercase">CONNECT@MAGSMEN.IN</a></li>
+                    <li><span style="text-transform:capitalize">208,212 Ap Cotton Association Building,<br> Opp Avantra Jewels, Lakshmipuram Main Road,<br> Guntur, Andhra Pradesh, 522007.</span></li>
+                  </ul>
+                </div>
+                <div class="contact__info">
+                  <h3 class="sub-title-anim-top animation__word_come" style="font-size: 22px; margin-bottom:-18px">Corporate Office</h3>
+                  <ul>
+                    <li><a href="tel:+(2)578365379">+91 90449 10449</a></li>
+                    <li><a href="mailto:hydops@magsmen.in" style="text-transform:lowercase">hydops@magsmen.in</a></li>
+                    <li><span style="text-transform:capitalize"> 4th Floor 402, Ayyappa Society,<br>Plot No:1303, Madhapur,  <br> Hyderabad, Telangana 500081.</span></li>
+                  </ul>
+                </div>
+                <div class="contact__info">
+                  <h3 class="sub-title-anim-top animation__word_come" style="font-size: 22px; margin-bottom:-18px">Australia Office</h3>
+                  <ul>
+                    <li><a href="tel:+10422554889">+10422554889</a></li>
+                    <!-- <li><a href="magsmen.com.au" target="_blank">Magsmen.com.au</a></li> -->
+                    <li><a href="mailto:connect@magsmen.com.au" style="text-transform:lowercase">CONNECT@MAGSMEN.COM.AU</a></li>
+                    <li><span style="text-transform:capitalize"> 1/9, Fifth Avenue, Rowville, VIC, 3178.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 form-column">
+                <div class="contact__form">
+                  <form action="#" method="POST" id="contactform">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                      <div class="col-xxl-6 col-xl-6 col-12">
+                        <input type="text" id="name" name="name" required placeholder="Name *">
+                      </div>
+                      <div class="col-xxl-6 col-xl-6 col-12">
+                        <input type="email" id="email" name="email" required placeholder="Email *">
+                      </div>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-xxl-6 col-xl-6 col-12">
+                        <input type="tel" id="phone" name="phone"  required placeholder="Phone">
+                      </div>
+                      <div class="col-xxl-6 col-xl-6 col-12">
+                        <input type="text" id="subject" name="subject"  required  placeholder="Subject *">
+                      </div>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-12">
+                        <textarea id="message" name="message" placeholder="Messages *"></textarea>
+                      </div>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-12 d-flex justify-content-center">
+                        <div id="btn_wrapper">
+                      
+                          <button class="wc-btn-black btn-hover btn-item"><span></span> Send Message<i
+                              class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact area end -->
+
+      </main>
+
+
+
+{% endblock %}

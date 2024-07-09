@@ -1,0 +1,52 @@
+
+
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+
+        <!-- Blog detail start -->
+        <section class="blog__detail"> 
+          <div class="container g-0 line pt-140">
+            <span class="line-3"></span>
+            <div class="row">
+                {% if work_info %}
+              <div class="col-xxl-8 col-xl-10 offset-xxl-2 offset-xl-1">
+                <div class="blog__detail-top">
+                  <!-- <h2 class="blog__detail-date animation__word_come text-white">Design, Marketing <span class="text-white">25 Jan 2019</span></h2> -->
+                  <h3 class="blog__detail-title animation__word_come">{{work_info.Title}}
+                  </h3>
+                  <!-- <div class="blog__detail-metalist">
+                    <div class="blog__detail-meta">
+                      <img src="{% static 'assets/imgs/blog/detail/author.png' %}" alt="Author Picture">
+                      <p>Writen by <span>Codexpand</span></p>
+                    </div>
+                    <div class="blog__detail-meta">
+                      <p>Viewed <span>3 min read</span></p>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="col-xxl-12 col-12">
+                <div class="blog__detail-thumb" id="blog_thum-img">
+                  <img src="/media/{{work_info.Image}}" alt="Blog Thumbnail" data-speed="0.5">
+                </div>
+              </div>
+              <div class="col-xxl-8 col-xl-10 offset-xxl-2 offset-xl-1">
+                <div class="blog__detail-content">
+                  {{ work_info.Body|safe }}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </section>
+        <!-- Blog detail end -->
+
+      </main>
+
+
+{% endblock %}
